@@ -2139,3 +2139,33 @@
 				}
 	
 }
+})(jQuery);
+
+;(function($){$.fn.cameraStop = function() {
+	var wrap = $(this),
+		elem = $('.camera_src',wrap),
+		pieID = 'pie_'+wrap.index();
+	elem.addClass('stopped');
+	if($('.camera_showcommands').length) {
+		var camera_thumbs_wrap = $('.camera_thumbs_wrap',wrap);
+	} else {
+		var camera_thumbs_wrap = wrap;
+	}
+}
+})(jQuery);
+
+;(function($){$.fn.cameraPause = function() {
+	var wrap = $(this);
+	var elem = $('.camera_src',wrap);
+	elem.addClass('paused');
+}
+})(jQuery);
+
+;(function($){$.fn.cameraResume = function() {
+	var wrap = $(this);
+	var elem = $('.camera_src',wrap);
+	if(typeof autoAdv === 'undefined' || autoAdv!==true){
+		elem.removeClass('paused');
+	}
+}
+})(jQuery);
