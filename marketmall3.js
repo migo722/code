@@ -2233,21 +2233,6 @@
 
 				}
 		
-		
-	
 }
-
-})(jQuery);
-
-;(function($){$.fn.cameraStop = function() {
-	var wrap = $(this),
-		elem = $('.camera_src',wrap),
-		pieID = 'pie_'+wrap.index();
-	elem.addClass('stopped');
-	if($('.camera_showcommands').length) {
-		var camera_thumbs_wrap = $('.camera_thumbs_wrap',wrap);
-	} else {
-		var camera_thumbs_wrap = wrap;
-	}
 }
 }
